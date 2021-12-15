@@ -1,5 +1,6 @@
 package com.example.idea20212src.entity;
 
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
@@ -13,6 +14,7 @@ import java.io.Serializable;
  * @since 2021-09-07
  */
 @EqualsAndHashCode(callSuper = false)
+@Data
 public class Test implements Serializable {
 
     private static final long serialVersionUID = 1L;
