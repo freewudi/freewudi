@@ -16,7 +16,10 @@ public class test {
     }
 
     public static void main(String[] args) {
-        System.out.println(ladder(9)+"+"+ladder(11));
-        System.out.println("hello world");
+//        System.out.println(ladder(9)+"+"+ladder(11));
+//        System.out.println("hello world");
+        int a = 1;
+        FinalStaticTest.test(a);
+        System.out.println(a);
     }
 }
