@@ -3,7 +3,7 @@ public class FinalStaticTest {
     static{
         System.out.println("---");
     }
-    public static void test(int a){
+    public void test(int a){
         a++;
     }
 }
