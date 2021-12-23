@@ -1,3 +1,5 @@
+package charact3;
+
 public class Flower {
     private int petalCount = 0;
     private String s = new String("null");

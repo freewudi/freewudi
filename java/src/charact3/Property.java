@@ -1,3 +1,5 @@
+package charact3;
+
 import java.util.Date;
 import java.util.Properties;
 

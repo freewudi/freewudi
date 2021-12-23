@@ -1,3 +1,5 @@
+package charact3;
+
 class Value {
     int i;
 }

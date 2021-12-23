@@ -1,3 +1,5 @@
+package charact3;
+
 public class URShift {
     public static void main(String[] args) {
         int i = -1;

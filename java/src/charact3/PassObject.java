@@ -1,3 +1,5 @@
+package charact3;
+
 class Letter {
     char c;
     static void f(Letter y) {

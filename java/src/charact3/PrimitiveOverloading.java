@@ -1,4 +1,6 @@
-//: PrimitiveOverloading.java
+package charact3;
+
+//: charact3.PrimitiveOverloading.java
 // Promotion of primitives and overloading
 public class PrimitiveOverloading {
     // boolean can't be automatically converted
