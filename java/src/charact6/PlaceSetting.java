@@ -1,4 +1,4 @@
-package charact06;
+package charact6;
 
 class Plate {
     Plate(int i) {
