@@ -1,3 +1,5 @@
+package 基础;
+
 public class DeadLock {
     public static String obj1 = "obj1";
     public static String obj2 = "obj2";
@@ -12,14 +14,14 @@ class Lock1 implements Runnable{
     @Override
     public void run(){
         try{
-            System.out.println("Lock1 running");
+            System.out.println("基础.Lock1 running");
             while(true){
                 synchronized(DeadLock.obj1){
-                    System.out.println("Lock1 lock obj1");
+                    System.out.println("基础.Lock1 lock obj1");
                     Thread.sleep(3000);//获取obj1后先等一会儿，让Lock2有足够的时间锁住obj2
                     System.out.println("请求锁2开始");
                     synchronized(DeadLock.obj2){
-                        System.out.println("Lock1 lock obj2");
+                        System.out.println("基础.Lock1 lock obj2");
                     }
                 }
             }
@@ -32,14 +34,14 @@ class Lock2 implements Runnable{
     @Override
     public void run(){
         try{
-            System.out.println("Lock2 running");
+            System.out.println("基础.Lock2 running");
             while(true){
                 synchronized(DeadLock.obj2){
-                    System.out.println("Lock2 lock obj2");
+                    System.out.println("基础.Lock2 lock obj2");
                     Thread.sleep(3000);
                     System.out.println("请求锁1开始");
                     synchronized(DeadLock.obj1){
-                        System.out.println("Lock2 lock obj1");
+                        System.out.println("基础.Lock2 lock obj1");
                     }
                 }
             }

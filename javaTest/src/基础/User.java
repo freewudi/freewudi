@@ -1,3 +1,5 @@
+package 基础;
+
 public class User {
     public String name;
     public int age;

@@ -1,3 +1,5 @@
+package 基础;
+
 public class swap {
     static int findDuplicate(int[] nums) {
         int[] map=new int[nums.length];

@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package 基础;
+
 import java.util.Arrays;
 
 public class Member extends User{

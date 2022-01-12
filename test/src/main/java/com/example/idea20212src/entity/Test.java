@@ -1,5 +1,4 @@
 package com.example.idea20212src.entity;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
