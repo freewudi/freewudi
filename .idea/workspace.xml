@@ -5,38 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2727794d-700a-4102-afd9-1cba658f861c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaTest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/FinalStaticTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/MyThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/Reload.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/exception.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/swap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTest/test2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DeadLock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FinalStaticTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reload.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exception.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaTest/src/算法/LengthOfLongestSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaTest/src/算法/MyDoubleLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaTest/src/算法/MySingleLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaTest/src/算法/两个有序数组的中位数.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaTest/src/算法/合并升序链表.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaTest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/javaTest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaTest/src/基础/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaTest/src/基础/StringUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +32,7 @@
     </option>
   </component>
   <component name="ProjectId" id="22aMYulCplW8QOUb94cik0xeHHw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -77,6 +53,7 @@
       <updated>1640071302413</updated>
       <workItem from="1640071306681" duration="201000" />
       <workItem from="1640071606523" duration="36000" />
+      <workItem from="1645510782210" duration="19000" />
     </task>
     <servers />
   </component>
