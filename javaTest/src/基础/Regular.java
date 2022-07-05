@@ -71,14 +71,24 @@ public class Regular {
 //            System.out.println(mc.group());
 //        }
 
-        String reg="\\d{3,6}";
-        String test="61762828 176 2991 871";
+//        String reg="\\d{3,6}";
+//        String test="61762828 176 2991 871";
+//        System.out.println("文本："+test);
+//        System.out.println("贪婪模式："+reg);
+//        Pattern p1 =Pattern.compile(reg);
+//        Matcher m1 = p1.matcher(test);
+//        while (m1.find()) {
+//            System.out.println("匹配结果：" + m1.group(0));
+//        }
+//        String reg="[\\u4e00-\\u9fa5]";//中文
+        String reg="[\\d]";
+        String test="1中国1";
         System.out.println("文本："+test);
         System.out.println("贪婪模式："+reg);
         Pattern p1 =Pattern.compile(reg);
         Matcher m1 = p1.matcher(test);
         while (m1.find()) {
-            System.out.println("匹配结果：" + m1.group(0));
+            System.out.println("匹配结果：" + m1.group());
         }
     }
 }

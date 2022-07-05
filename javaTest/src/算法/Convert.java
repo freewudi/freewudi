@@ -29,5 +29,7 @@ public class Convert {
     public static void main(String[] args) {
         Convert convert = new Convert();
         System.out.println(convert.convert("PAYPALISHIRING",10));
+
+        System.out.println(-1%9);
     }
 }

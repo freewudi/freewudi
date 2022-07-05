@@ -20,7 +20,6 @@ public class StringUtil {
     public static void main(String[] args) {
         String a = StringUtil.humpToLine2("AAAAAAbB");
         System.out.println(a);
-
         String aaa = null;
         String bbb = null;
         System.out.println(Objects.equals(aaa,bbb));
