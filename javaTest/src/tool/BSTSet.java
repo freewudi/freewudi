@@ -1,4 +1,7 @@
 package tool;
+
+import pojo.Node;
+
 public class BSTSet<E> implements Set<E> {
     private BST<E> bst;
 
@@ -14,16 +17,16 @@ public class BSTSet<E> implements Set<E> {
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        return bst.contain((Node) o);
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return bst.size();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return bst.isEmpty();
     }
 }

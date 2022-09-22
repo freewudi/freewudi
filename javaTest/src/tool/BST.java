@@ -4,8 +4,9 @@ import pojo.Node;
 
 public class BST<E> {
     //创建根节点
-    private Node root;
+    public Node root;
 
+    public int size;
     /**
      * 创建节点
      *
@@ -15,6 +16,7 @@ public class BST<E> {
     public void add(int key, String data) {
         //如果根节点为空，则新增节点为根节点
         if (root == null) {
+            size++;
             root = new Node(key, data);
         }
 
@@ -42,6 +44,11 @@ public class BST<E> {
             // 插入到父节点的右边
             pre.right = new Node(key, data);
 
+        size++;
+    }
+
+    public boolean contain(Node node){
+        return node.data.equals(find(node.val).data);
     }
 
     public Node find(int key) {
@@ -148,14 +155,97 @@ public class BST<E> {
         // 找到要删除的节点
         Node targetNode = find(key);
         // 如果node为null  这说明树中不存在指定key的节点，直接返回false
-        if (targetNode == null) {
+        if (targetNode == null)
             return false;
-        }
+
         //找到删除节点的父节点
         Node parent = findParent(key);
+        if (parent != null) {
+            if (targetNode.left == null && targetNode.right == null) {  // 1、删除节点是叶子节点
+                if (parent.left != null && parent.left.val == targetNode.val) // 待删除节点是父节点的左节点
+                    parent.left = null;
+                else    // 待删除节点是父节点的右节点
+                    parent.right = null;
+            } else if (targetNode.left != null && targetNode.right != null) {    // 3、待删除节点有两棵子树
+                // 备份一下要替换的节点
+                Node maxNode = searchMax(targetNode.left);
+                Node temp = new Node(maxNode.val, maxNode.data);
+                // 将这个节点从树中删除
+                delNode(maxNode.val);
+                // temp节点 的左、右指针指向 待删除节点的左、右节点
+                //最大子节点被删除，最大子节点的子节点成为targetNode的左节点，再把temp的左右节点指向targetNode的左右节点
+                temp.left = targetNode.left;
+                temp.right = targetNode.right;
+                // 父节点的左指针或者右指针指向temp节点， 备份节点彻底替换掉待删除节点
+                if (parent.left != null && parent.left.val == targetNode.val)
+                    parent.left = temp;
+                else
+                    parent.right = temp;
+            } else {
+                // 如果待删除节点是parent的左节点
+                if (parent.left != null && parent.left.val == targetNode.val) {
+                    if (targetNode.left != null) {
+                        parent.left = targetNode.left;
+                    } else if (targetNode.right != null) {
+                        parent.left = targetNode.right;
+                    }
+                    //如果待删除节点是parent的右节点
+                } else {
+                    if (targetNode.left != null) {
+                        parent.right = targetNode.left;
+                    } else if (targetNode.right != null) {
+                        parent.right = targetNode.right;
+                    }
+                }
+            }
 
-
-
+        } else { // parent为null，则表示删除节点是root节点
+            if (targetNode.left == null && targetNode.right == null) {
+                root = null;
+            } else if (targetNode.left != null && targetNode.right != null) {
+                Node maxNode = searchMax(targetNode.left);
+                Node temp = new Node(maxNode.val, maxNode.data);
+                delNode(maxNode.val);
+                temp.right = targetNode.right;
+                temp.left = targetNode.left;
+                // 将这个备份节点设置为root节点
+                this.root = temp;
+            } else {
+                if (targetNode.left != null)
+                    this.root = targetNode.left;
+                else
+                    this.root = targetNode.right;
+            }
+        }
+        size--;
         return true;
+    }
+
+    /**
+     * 中序遍历
+     * @param node
+     */
+    public void midOrder(Node node) {
+        if (node != null) {
+            midOrder(node.left);
+            System.out.println("节点的key："+node.val+" 节点的值："+node.data);
+            midOrder(node.right);
+        }
+    }
+
+    /**
+     * 判断bst是否为空
+     * @return
+     */
+    public boolean isEmpty(){
+        return root == null;
+    }
+
+    /**
+     * bst大小
+     * @return
+     */
+    public int size(){
+        return size;
     }
 }
