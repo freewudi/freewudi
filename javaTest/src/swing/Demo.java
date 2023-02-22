@@ -21,7 +21,7 @@ public class Demo extends JDialog {
         container.setVisible(true);
         container.add(jButton);
         jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //jFrame.setVisible(true);
+        jFrame.setVisible(true);
         jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

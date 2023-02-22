@@ -1,6 +1,12 @@
 package util;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 public class ExcelUtil {
     /**
@@ -9,26 +15,36 @@ public class ExcelUtil {
      */
 
     public static void main(String[] args) {
-        // 创建工作簿对象
-        XSSFWorkbook xssfWorkbook = null;
-        try {
-            xssfWorkbook = new XSSFWorkbook("C:\\Users\\Administrator\\Documents\\test2.xlsx");
-            // 获取工作表 getSheet 指定sheet名字获取
-            //  XSSFSheet sheet = xssfWorkbook.getSheet("sheet1");
-            // 获取工作表 getSheetAt 从第一个sheet获取,一般用这个
-            XSSFSheet sheet = xssfWorkbook.getSheetAt(0);
-            // 获取行
-            for (Row cells : sheet) {
-                // 获取单元格
-                for (Cell cell : cells) {
-                    // 获取单元格内容 假设此时单元格内容都是文本格式，用getStringCellValue获取
-                    String value = cell.getStringCellValue();
-                    System.out.println(value);
-                }
-            }
-            xssfWorkbook.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        String str = "\"192.168.91.235\"";
+        System.out.println(str);
+        str = str.replaceAll("\"", "")
+                .replaceAll("\n", "")
+                .replaceAll("\r", "")
+                .replaceAll(" ", "");
+
+        System.out.println(str.split("\\.").length);
+        String pattern = "^\\d{4,12}$";
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(str.replaceAll("\\.",""));
+        System.out.println(m.find());
+        System.out.println(str);
+//        String pattern = "((2(5[0-5]|[0-4]\\d))|[0-1]?\\d{1,2})(\\.((2(5[0-5]|[0-4]\\d))|[0-1]?\\d{1,2})){3}";
+//
+//        Pattern r = Pattern.compile(pattern);
+//        Matcher m = r.matcher(str);
+//        System.out.println(m.matches());
+//        String bString="181.116.222.88 192.168.1.1";
+//        String regEx="((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)";
+//        Pattern p = Pattern.compile(regEx);
+//        Matcher m = p.matcher(bString);
+//        if (m.find()) {
+//            String result = m.group();
+//            System.out.println(result);
+//        }
+//        Pattern pattern = Pattern.compile("\\.\"");
+//        Stream<String> stringStream = pattern.splitAsStream(bString);
+//        stringStream.forEach(System.out::println);
+
+
     }
 }

@@ -7,8 +7,10 @@ import com.example.idea20212src.factory.ProxyFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+        DataSourceAutoConfiguration.class})
 public class Idea20212srcApplication {
     public void test() {
         //目标对象
